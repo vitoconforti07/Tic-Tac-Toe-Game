@@ -60,7 +60,7 @@ public class Giocatore {
 
         while (!(check.isFuel(matrice) || check.isWin(matrice))) {
 
-            if (turno == valore1) turno = valore2;
+            if (turno.equals(valore1)) turno = valore2;
             else {
                 turno = valore1;
             }
@@ -90,7 +90,7 @@ public class Giocatore {
 
                 TicTac.stampaTicTac(matrice);
             } else {
-                if (turno == valore1) turno = valore2;
+                if (turno.equals(valore1)) turno = valore2;
                 else {
                     turno = valore1;
                 }
@@ -167,12 +167,12 @@ public class Giocatore {
 
         while (!(check.isFuel(matrice) || check.isWin(matrice))) {
 
-            if (turno == valore1) turno = valore2;
+            if (turno.equals(valore1)) turno = valore2;
             else {
                 turno = valore1;
             }
             System.out.println("Tocca al " + valoriGiocatori.get(turno));
-            if (turno == valore1) {
+            if (turno.equals(valore1)) {
 
                 int rigaTurno;
                 int colonnaTurno;
@@ -212,8 +212,8 @@ public class Giocatore {
 
                 while (true) {
                     Random random = new Random();
-                    rigaTurno = random.nextInt(2);
-                    colonnaTurno = random.nextInt(2);
+                    rigaTurno = random.nextInt(3);
+                    colonnaTurno = random.nextInt(3);
 
                     if (matrice[rigaTurno][colonnaTurno].isEmpty()){
                         break;
