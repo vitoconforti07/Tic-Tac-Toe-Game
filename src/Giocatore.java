@@ -56,7 +56,7 @@ public class Giocatore {
         System.out.println("il " + valoriGiocatori.get(valore1) + " ha insericato le coordinate (" + riga + "," + colonna + ") " + "di valore " + valore1);
         matrice[riga - 1][colonna - 1] = valore1;
 
-        TicTac.stampaTicTac(matrice);
+        TicTacToe.stampaTicTac(matrice);
 
         while (!(check.isFuel(matrice) || check.isWin(matrice))) {
 
@@ -88,7 +88,7 @@ public class Giocatore {
                 System.out.println("il " + valoriGiocatori.get(turno) + " ha insericato le coordinate (" + rigaTurno + "," + colonnaTurno + ") " + "di valore " + turno);
                 matrice[rigaTurno - 1][colonnaTurno - 1] = turno;
 
-                TicTac.stampaTicTac(matrice);
+                TicTacToe.stampaTicTac(matrice);
             } else {
                 if (turno.equals(valore1)) turno = valore2;
                 else {
@@ -163,7 +163,7 @@ public class Giocatore {
         System.out.println("il " + valoriGiocatori.get(valore1) + " ha insericato le coordinate (" + riga + "," + colonna + ") " + "di valore " + valore1);
         matrice[riga - 1][colonna - 1] = valore1;
 
-        TicTac.stampaTicTac(matrice);
+        TicTacToe.stampaTicTac(matrice);
 
         while (!(check.isFuel(matrice) || check.isWin(matrice))) {
 
@@ -196,7 +196,7 @@ public class Giocatore {
                     System.out.println("il " + valoriGiocatori.get(turno) + " ha insericato le coordinate (" + rigaTurno + "," + colonnaTurno + ") " + "di valore " + turno);
                     matrice[rigaTurno - 1][colonnaTurno - 1] = turno;
 
-                    TicTac.stampaTicTac(matrice);
+                    TicTacToe.stampaTicTac(matrice);
                 } else {
                     turno = valore2;
                     System.out.println("casella già occupata riprovare con un'altra");
@@ -216,7 +216,7 @@ public class Giocatore {
                         matrice[rigaTurno][colonnaTurno] = turno;
 
                         System.out.println("il " + valoriGiocatori.get(turno) + " ha insericato le coordinate (" + rigaTurno + 1 + "," + colonnaTurno + 1 + ") " + "di valore " + turno);
-                        TicTac.stampaTicTac(matrice);
+                        TicTacToe.stampaTicTac(matrice);
                         break;
                     } else if (check.isFuel(matrice)) {
                         break;
