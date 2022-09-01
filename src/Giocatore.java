@@ -85,7 +85,7 @@ public class Giocatore {
             }
             if (matrice[rigaTurno - 1][colonnaTurno - 1].isEmpty()) {
 
-                System.out.println("il " + valoriGiocatori.get(turno) + "ha insericato le coordinate (" + rigaTurno + "," + colonnaTurno + ") " + "di valore " + turno);
+                System.out.println("il " + valoriGiocatori.get(turno) + " ha insericato le coordinate (" + rigaTurno + "," + colonnaTurno + ") " + "di valore " + turno);
                 matrice[rigaTurno - 1][colonnaTurno - 1] = turno;
 
                 TicTac.stampaTicTac(matrice);
@@ -193,15 +193,12 @@ public class Giocatore {
                 }
                 if (matrice[rigaTurno - 1][colonnaTurno - 1].isEmpty()) {
 
-                    System.out.println("il " + valoriGiocatori.get(turno) + "ha insericato le coordinate (" + rigaTurno + "," + colonnaTurno + ") " + "di valore " + turno);
+                    System.out.println("il " + valoriGiocatori.get(turno) + " ha insericato le coordinate (" + rigaTurno + "," + colonnaTurno + ") " + "di valore " + turno);
                     matrice[rigaTurno - 1][colonnaTurno - 1] = turno;
 
                     TicTac.stampaTicTac(matrice);
                 } else {
-                    if (turno == valore1) turno = valore2;
-                    else {
-                        turno = valore1;
-                    }
+                    turno = valore2;
                     System.out.println("casella già occupata riprovare con un'altra");
 
                 }
@@ -221,7 +218,7 @@ public class Giocatore {
                 }
                 matrice[rigaTurno][colonnaTurno] = turno;
 
-                System.out.println("il " + valoriGiocatori.get(turno) + "ha insericato le coordinate (" + Integer.valueOf(rigaTurno+1) + "," + Integer.valueOf(colonnaTurno+1) + ") " + "di valore " + turno);
+                System.out.println("il " + valoriGiocatori.get(turno) + " ha insericato le coordinate (" + rigaTurno+1 + "," + colonnaTurno+1 + ") " + "di valore " + turno);
                TicTac.stampaTicTac(matrice);
 
             }
