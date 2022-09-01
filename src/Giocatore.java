@@ -202,8 +202,7 @@ public class Giocatore {
                     System.out.println("casella già occupata riprovare con un'altra");
 
                 }
-            }
-            else {
+            } else {
                 int rigaTurno;
                 int colonnaTurno;
 
@@ -212,14 +211,18 @@ public class Giocatore {
                     rigaTurno = random.nextInt(3);
                     colonnaTurno = random.nextInt(3);
 
-                    if (matrice[rigaTurno][colonnaTurno].isEmpty()){
+                    if (matrice[rigaTurno][colonnaTurno].isEmpty()) {
+
+                        matrice[rigaTurno][colonnaTurno] = turno;
+
+                        System.out.println("il " + valoriGiocatori.get(turno) + " ha insericato le coordinate (" + rigaTurno + 1 + "," + colonnaTurno + 1 + ") " + "di valore " + turno);
+                        TicTac.stampaTicTac(matrice);
                         break;
+                    } else if (check.isFuel(matrice)) {
+                        break;
+
                     }
                 }
-                matrice[rigaTurno][colonnaTurno] = turno;
-
-                System.out.println("il " + valoriGiocatori.get(turno) + " ha insericato le coordinate (" + rigaTurno+1 + "," + colonnaTurno+1 + ") " + "di valore " + turno);
-               TicTac.stampaTicTac(matrice);
 
             }
         }
